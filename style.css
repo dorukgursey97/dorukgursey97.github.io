@@ -1,0 +1,128 @@
+:root {
+    --bg: #0f0f0f;
+    --card-bg: #1a1a1a;
+    --border: #262626;
+    --text: #efefef;
+    --text-dim: #a0a0a0;
+    --accent: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 0 5%;
+}
+
+main { max-width: 900px; margin: 0 auto; }
+
+/* Hero / Header Refined */
+#hero { padding: 120px 0 80px 0; }
+
+#hero h1 { 
+    font-size: 3rem; 
+    font-weight: 700; 
+    margin-bottom: 0.2rem; 
+    letter-spacing: -1px; 
+}
+
+.role { 
+    font-size: 1.1rem; 
+    color: var(--text-dim); 
+    font-weight: 400; 
+    margin-bottom: 1.5rem; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bio-container {
+    max-width: 700px;
+    border-left: 2px solid var(--border);
+    padding-left: 24px;
+    margin-top: 2rem;
+}
+
+.bio-text {
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+    font-style: italic; /* Keeps the "quoted" feel elegant */
+}
+
+/* Section Labels */
+.section-label { 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+    padding-top: 40px;
+}
+
+/* Projects Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    background: #222;
+}
+
+.card-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-content { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
+.card-content h3 { margin-bottom: 10px; font-size: 1.1rem; }
+.card-content p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 15px; flex-grow: 1; }
+
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.tags span { font-size: 0.7rem; background: #262626; padding: 3px 8px; border-radius: 4px; color: var(--text-dim); border: 1px solid #333; }
+
+.card-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #262626;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-link:hover { color: var(--text-dim); }
+.project-link i { width: 14px; height: 14px; }
+
+/* Contact Section */
+.contact-links { display: flex; flex-wrap: wrap; gap: 40px; padding-bottom: 100px; }
+.contact-item { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-size: 0.95rem; }
+.contact-item:hover { color: var(--text-dim); }
+
+footer { padding: 40px 0; text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--border); }
+
+@media (max-width: 600px) {
+    #hero h1 { font-size: 2.2rem; }
+    .bio-text { font-size: 1rem; }
+}
